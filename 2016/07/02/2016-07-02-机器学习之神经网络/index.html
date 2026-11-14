@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>机器学习之神经网络 | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-07-02T12:00:00.000Z" itemprop="datePublished">
+          2016-07-02
+      </time>
+    
+</span>
+                <h1>机器学习之神经网络</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>总想写点儿什么却又不知道从哪写起，后来想了想还是从技术学习上说起吧，也算是对之前大学学习生活中的总结和认知的一个整理，因为不太喜欢把客观世界和主观意识分辨的太过于清晰，所以文章中自己的理解可能多一点儿，一是分享整理一下自己学习的知识，二是作为学习表达一下自己的观点，三是作为菜鸟的我认知可能还不到位，希望各位看官能提出宝贵的意见和建议。</p>
+<hr>
+<h3 id="生物学中的生物神经网络"><a href="#生物学中的生物神经网络" class="headerlink" title="生物学中的生物神经网络"></a><a href="#%E7%94%9F%E7%89%A9%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%94%9F%E7%89%A9%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C" title="生物学中的生物神经网络"></a>生物学中的生物神经网络</h3><p>       机器学习中神经网络是严格意义来讲应该是人工神经网络，在个人看来他是对生物学意义上大脑神经元的高度模拟，但是有关人类大脑的研究至今仍有很多未知，所以人工神经网络也算是他的一个演化（只是个人拙见）。不知道你还记不记得高中生物课本中讲到的神经细胞（又称神经元），什么？不记得……好吧，来听我捋捋，看看能不能唤醒你的沉睡的远古记忆。</p>
+<p>       神经元的结构如下:</p>
+<p><img src="/images/shenjingyuan1.jpg"></p>
+<p>       是不是有点儿印象？还没……好吧，@#$^&amp;%!$# ……*&amp;%￥&amp;@34%#!（唤醒咒语）</p>
+<p>       言归正传，一个神经元主要由树突和轴突组成（如上图），而多个神经元之间相互连接形成神经组织，神经组织又组成了我们的大脑。神经元和神经元之间的连接的目的是传递兴奋，其实本质上是不同神经元间树突和轴突的互相连接进行传递，是怎么连接传递兴奋的呢？对，就是轴突末梢的突触小体，突触小体产生突触小泡用来传递神经元间的神经递质，神经递质是连接神经元间的主要化学物质。上个神经元轴突与下个神经元树突之间的信号是以神经递质的形式传输，所以是传递化学信号，而在神经元神经细胞受到刺激后，细胞膜对离子的通透性会发生改变，导致膜内外产生电位差，进而产生电信号。明白了吧，嗨嗨嗨，醒醒了都，划重点了啊，化学信号和电信号的相互转变这个考试肯定考，少则5分，多则10分，balabala……<br><img src="/images/tuchu.jpg"></p>
+<p>       还记不记得生物老师常说的神经元突触传递兴奋有两种情况：兴奋性和抑制性。兴奋在突触小体上进行电信号-化学信号的转变，通过在突触间担当的信使—-神经递质进行传递，之后再在新的神经元中完成化学信号-电信号的转变，要完成电信号→化学信号→电信号的转换必须有完整的突触结构。现在有印象了吧，兴奋性和抑制性的不同之处在于释放的递质不同，一个是兴奋性递质产生神经兴奋，另一个是抑制性递质产生神经抑制。<br>       ok，我们的生物学上的神经元远古记忆唤醒结束，不知道你唤醒了多少？好吧……反正我高中生物是化学老师教的︿(￣︶￣)︿。机器学习的神经网络讲生物有什么用？在个人看来理解生物学的神经机理对理解机器学习的人工神经网络有很大帮助，不管是从现在的原理上还是以后的数学计算理解上都会有很大好处。当然生物学这块不想看的话可以跳过往后看。</p>
+<p>       其实我们人类学习能力提升的本质就是复杂的神经网络中的众多神经元进行神经兴奋和神经抑制的迭代变换。为什么这么说呢？就拿背单词来说吧，abandon，abandon，abandon……好吧，也就记得他了0_0，对abandon多次重复的记忆让我们的部分神经元进入兴奋状态部分进入抑制状态，神经元间神经递质的传递让其他相关联神经元也相继进入神经兴奋&#x2F;抑制状态，刚开始可能记不得它是什么意思，但是时间久了每当我们见到abandon，某些固定的神经元就开始工作，神经递质也就相应传递，刚开始可能神经递质的传递很慢，但是记忆时间久了，大脑对待记忆事物的认知被逐渐调整，某些需要的神经递质的分泌以及信号在神经元间的反应速度加快，也就是不同神经元受到了不同的记忆刺激，最后也就达到abandon放弃abandon放弃abandon放弃这种随口就来的状态。</p>
+<hr>
+<h3 id="机器学习的人工神经网络"><a href="#机器学习的人工神经网络" class="headerlink" title="机器学习的人工神经网络"></a><a href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C" title="机器学习的人工神经网络"></a>机器学习的<a target="_blank" rel="noopener" href="http://ufldl.stanford.edu/wiki/index.php/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">人工神经网络</a></h3><p>       其实这个标题原本打算用&lt;神经网络中的数学&gt;来命名的，但是为了避免数学本身存在的“望而却步”性，还是用&lt;机器学习的神经网络&gt;来命名吧。0.0数学来了不要慌，稳住，我们能羸，这里的数学基础知识暂时要求的不多，加减乘除分分钟搞定。</p>
+<p>       在这儿顺便过渡一下上边的生物，这样可以更好的理解下边讲的数学部分，划重点了啊。神经元的两种状态：兴奋和抑制，怎么在两种状态间互相传递转化呢？上一个神经元的分泌的神经递质让下一个神经元产生相应的兴奋状态或抑制状态，最终下一个神经元是什么状态的呢？两种状态相互转换的临界点可以先简单认为为是由神经递质的多少决定的（实际并非如此，在这里我们做一个假设），当超过临界点时兴奋，低于临界点抑制。生物重点差不多划完了，接下来我们来划数学的，我们先来看一张图。</p>
+<p><img src="/images/300px-SingleNeuron.png"></p>
+<p>       这个图就是单个神经元的简单图示法，圆圈代表一个“神经元”，x1,x2,x3就代表上一个神经元传递过来的神经递质，当这些神经递质刺激神经元时，神经元根据神经递质产生兴奋或者抑制的状态，之后再传递给其他神经元。但是神经元到底是怎么判定是兴奋还是抑制呢？按照上边我们的假设，两种状态的相互转换是由神经递质的多少决定的，假设阈值（临界点）是0.5,大于等于0.5时神经兴奋，反之抑制，假如x1,x2,x3三者的和是0.7,此时神经元兴奋，然后依此类推，多个神经元就组成了神经网络。</p>
+<p>       我们可以用数学方式来表示这个过程，之前我们是假设神经递质量的多少来决定兴奋抑制，但是实际并非如此，所以我们假设一个函数y&#x3D;h(x1,x2,x3)，h(.)就是神经元状态变化的过程函数（不一定是累加的），计算函数h(.)后，然后再判定h(.)的结果是否达到被激活兴奋的条件，判定过程设为函数a(.)，a(.)在这里我们称为<strong>激活函数</strong>，我们最常见的就是用sigmoid函数作为激活函数，激活指的就是神经元兴奋和抑制互相激活的过程，y就是我们激活的结果，抑制或者兴奋，在这里我们用0和1分别表示抑制和兴奋。有没有感觉就像一个自动电饭煲，扔进去紫菜，米饭，水，自动balabala一顿捯饬，整出一碗饭来，好吃还是难吃？在这里我们引入输入（紫菜，米饭，水）和输出（好吃，难吃）的概念，也就是<strong>Input</strong>:x1,x2,x3，<strong>Output</strong>:0,1。</p>
+<p>       一个神经元说完了，我们来想想多个神经元怎么相互连接，啥？想不明白，想不明白就对了，因为世界上可能没有几个人知道生物神经系统的复杂结构，但是我们得找出一种最优且合理的进行模拟，其实目前深度学习中的神经网络不管是主流CNN，RNN，DNN还是其他神经网络都是基于**“层”<strong>的神经网络。斯坦福Andrew Ng(吴恩达)老师在</strong><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/machine-learning">Coursera</a><strong>中讲的“多层神经网络”很清楚的为我们讲解了这里的众多数学知识，想要深入学习的推荐可以先看</strong><a target="_blank" rel="noopener" href="https://mooc.study.163.com/smartSpec/detail/1001319001.htm">网易云课堂上吴免费的教程</a>**。</p>
+<p><img src="/images/NN_layers.jpg"></p>
+<p>       多个输入&#x2F;树突(<strong>Input</strong>&#x2F;Dendrite)，并且有一个输出&#x2F;轴突(<strong>Output</strong>&#x2F;Axon)。其中 x1,x2,x3是输入单元(Input units)，我们将原始数据输入给它们。a1,a2,a3是中间单元，它们负责将数据（突触小泡的神经递质）进行处理，然后呈递到下一层。最后是输出单元，它负责计算hθ(x)判断是兴奋还是抑制。第一层成为输入层(Input Layer)，最后一层称为输出层(Output Layer)，中间一层成为隐藏层(Hidden Layers)。我们为每一层都增加一个偏差单位(bias unit)就会形成下图所示的情况。</p>
+<p><img src="/images/NN_layers_bias.jpg"></p>
+<p>       输入层—隐藏层—输出层三层架构组成了神经网络的基础结构，结构有了是不是还缺点什么？对了，就是h(x)的计算过程到底是怎么计算的？这里实际上应用的是大学线性代数里的**<a target="_blank" rel="noopener" href="http://www2.edu-edu.com.cn/lesson_crs78/self/j_0022/soft/ch0605.html">矩阵运算</a><strong>。回想一下大学的线代，矩阵的本质实际上是向量在空间中的线性变换，在这里我们把输入的多个Xi看作一个</strong>向量**，称为<strong>输入向量</strong>，输出的y看作一个<strong>向量</strong>,称为<strong>输出向量</strong>，也就可以用以下数学公式表达：</p>
+<p>y&#x3D;a(h(x)),h(x)&#x3D;W·x+b</p>
+<p>       W叫做<strong>权重</strong>，b叫做<strong>偏移向量</strong>,W实际上就是一个矩阵，b是一个向量。在这儿我们想想之前说的大脑学习的生物本质，加强神经元的记忆刺激，调整我们对待记忆事物的认知，在这个数学公式中就是逐渐调整权重矩阵的值和偏移向量的值，使得从向量x经过计算后能得到我们想到的要正确的向量y。我们要求出W和b的最优解，经过最优化后一个简单的神经网络模型也就被训练出来，abandon作为输入x，通过W和b还有激活函数的一系列运算后知道了这个意思是“放弃”。。想一想最终我们怎么才能通过计算得到想要的权重和偏移呢？</p>
+<p>       基础的神经网络到这里就结束了，什么？结束了？对的，是结束了，因为数学、统计优化在机器学习中占的比重占很大部分，要学习的路还很长，在这里我只是想从生物角度总结一下自己的认识，因为个人感觉从问题本身的角度出发比从数学角度出发要好理解得多，就像大学学的线代：大学对线代的认识本质目的就是要求方程组的解，因为老师讲的都是怎么算，怎么求解，但实际上呢？直到我看MIT公开课上的讲解我才知道线代的本质，明明讲的是一门知识，但是给你的感觉不是在讲同一个东西，可能这就是国内传统和国外在教学目的上的差距吧，在这里附上B站上一个有关线代很有意思的解读：<strong><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av6731067/">线代的本质</a></strong>，感觉还不错哦，不看会后悔的呢……</p>
+<h4 id="Stay-hungry-Stay-foolish-Stay-yourself……"><a href="#Stay-hungry-Stay-foolish-Stay-yourself……" class="headerlink" title="Stay hungry,Stay foolish,Stay yourself……"></a><a href="#Stay-hungry-Stay-foolish-Stay-yourself%E2%80%A6%E2%80%A6" title="Stay hungry,Stay foolish,Stay yourself……"></a>Stay hungry,Stay foolish,Stay yourself……</h4>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2016/12/27/2016-12-27-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%86%B3%E7%AD%96%E6%A0%91/" style="float: left;">
+        ← 机器学习之决策树
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/06/22/2016-06-22-hello-world/">
+        Hello World之Hexo+Github建博指南 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

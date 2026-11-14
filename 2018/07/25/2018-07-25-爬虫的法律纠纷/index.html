@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>扒一扒爬虫路上的坑 | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-07-25T12:00:00.000Z" itemprop="datePublished">
+          2018-07-25
+      </time>
+    
+</span>
+                <h1>扒一扒爬虫路上的坑</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>最近抓了个微信公众号的会员数据（会员是花了不少钱申请的），具体哪个就不透露了，重点是因为会员的限制爬虫跑了一段时间后被对方监测到会员帐号的异常访问，然后就凉凉。好吧，对方说是要报警立案，然后追究法律责任，就是类似于下图这种的。至于后面的公关处理就不说了，因为这是第一次发生在自己身上的一些数据法律纠纷，这里就想谈一谈自己的看法。</p>
+<p>       我们先来看看这个图片新闻：</p>
+<p><img src="/images/webwxgetmsgimg.jpeg"></p>
+<p>       看到这个我是慌的，哈？有期徒刑？我是不是要进局子？<strong>我不要做爬虫了，我想转行QAQ</strong></p>
+<p>       从技术角度来看，定向爬虫这种获取数据的方式不知道什么时候起慢慢开始成为一家公司积累原始数据的一种手段，不得不承认大多数公司无论是创业型还是成熟型在缺失数据的情况下用爬虫这种方式既可以快速获取想要的数据，也可以获取到部分边缘业务所需的数据，从技术角度出发来讲，渐渐地形成了攻防对峙的一种局面，爬虫和反爬虫的斗争在这些年也越玩越热，从刚开始的ban IP，到动态js加密，从一些简单的验证码到文字验证码再到白百合、王珞丹的相爱相杀，各种手段层出不穷，不过归根到底还是攻与守。</p>
+<p>       当然，要从法律角度来看的话，我们得从历史说起，先来看看这些年关于爬虫法律上的坑吧。</p>
+<p>       2013年，百度因奇虎360违背Robots协议抓取复制百科等内容构成不正当竞争，起诉后者并索赔1亿元。</p>
+<p>       2016年2月，因认为百度视频通过抓取播放窗口的方式，嵌套乐视网视频资源到百度视频客户端，屏蔽了乐视网网页、网址、广告，造成公众混淆，构成不正当竞争，乐视起诉百度并索赔100万元。</p>
+<p>       2016年4月，大众点评诉百度旗下的百度地图及百度知道大量复制其用户点评等信息，构成不正当竞争，提出9000万元索赔要求。</p>
+<p>       2016年12月，“脉脉非法抓取使用新浪微博用户信息”案在北京知识产权法院终审宣判。法院认定脉脉的经营公司构成不正当竞争，判决驳回其上诉，维持一审立即停止不正当竞争行为，赔偿新浪微博运营商200万元的判决。</p>
+<p>       好吧，看到这个我确实慌。</p>
+<p>       在这个数据为王的时代，数据变成个体和集体都关心的事，无论是个人隐私数据，还是企业单位数据都成为人们所保护的重要数据，就从支付宝之前默认采集用户的个人隐私数据作为商用但是没有经过用户同意的事来看，很多人对于自己私人数据的保护意识也在不断增加，可能会有些人说这有什么给他就给他吧，有什么的又没损失自己个人的利益，那就先看看下面这张图吧。</p>
+<p><img src="/images/aiai.jpg"></p>
+<p>       这张图显示的是一个女生上的<strong>手环记录的心率数据图</strong>，重点是这张数据图表显示的是她正在<strong>爱爱</strong>时候的心跳分析。还有就是华为前段时间出的GPS定位手环，我们每天的工作生活数据都会被企业采集然后再绘制成地图路线，你的一举一动都会被别人掌控。然后呢，好的idea是根据你的行为为你分析你可能想去哪，为你推荐好的餐厅和一些不错的地方，但是坏的idea呢，你可能被类似于百度竟价地被推荐到莆田系餐厅，然后就没有然后了。这还不是最坏的，最坏的ided就是你被监视，没有任何隐私。</p>
+<p>       这都是从个人角度来看，从公司角度来看这个问题同样存在，就拿爬虫的数据来看，可能我们爬虫在某些程度上侵犯的是公司的一些隐私数据，就拿我工作中遇到的问题来看，可能这种猎取数据的方式真的不太恰当，不过大多数公司总想以最少的成本拿到最全的数据，爬虫可能成为当前最粗暴的解决方案，这种问题不仅仅是道德层面上的，而且也是法律层面的。</p>
+<hr>
+<p>       其实从微观角度看，爬虫只是采集数据的一种方式，数据采集的方式各种各样，比如之前所说的穿戴设备数据采集，还有一些公司内部私有数据产出，这些都只是数据的基础，未来可能出现更多样化的数据采集方式，个人感觉这都是极具前景的idea。</p>
+<p>       从宏观角度来看，数据是数据架构中数据流的基本组成单位，这里有点儿像TensorFlow里的张量，不管是一维数据还是多维数据都从一个单元中流入另一个单元，我们要做的就是把对我们有用的数据抽取出来，然后按照原本的数据架构中数据流呈现出来，然后从数据流中采集到对我们有用的信息。其实把思维角度放宽一点儿以上帝视角来看，<strong>我们生活在一个数据流动的世界里</strong>，不管是能量守恒定律，还是其他一些已发现的定律，这些数据至少目前我们是无法通过技术手段获取到的，假如有一种数据采集方式可以让我们很容易地得到这些数据（当然爬虫这种方式是不可能的啦），然后再以能量守恒公式的方式流动数据，这样的话我们的世界将会是另一种改变（《西部世界》中的程序世界完全被呈现也不是没有可能）。有点儿上升到我们生活的世界究竟是什么这种哲学和科学范畴问题，其实只从数据角度看本质上都是<strong>数据的流动</strong>（不同阶matrix的变换，只是个人拙见）。突然想到我们是不是生活在一个别人创造的数据世界中还是挺可怕的，有点像《黑客帝国》的世界观，可能中尼奥的毒太深，哈哈哈哈……</p>
+<p>       再回到我们之前说的数据流，其实<strong>信息数据本身是具有不对称性</strong>，这是由于时间和空间的限制所导致的，可能做投资和炒币的对这个感触深一点，如果有搬过砖的经历可能对这个的感受更深入一些，说白了就是利用<strong>信息数据不对称赚取差价</strong>。数据流在从数据注入到数据流出的时间差对我们决策的结果影响是很大的，这个无论是在投资理财还是在互联网领域都有最直观的表现（可能未来量子通信在普及后会让我们的信息数据不对称的时间差更短）。</p>
+<p>       目前来看，最常用数据架构的正常思路应该是DB-&gt;ETL-&gt;DW-&gt;OLAP-&gt;DM-BI，从整体数据注入到数据流出的过程应该是流动且闭环，当然闭环的要求可能有点儿高，比如国内巨头企业的数据流完全碾压国内大多数企业，就拿支付宝来说，单从用户层面来说，从用户基础数据到用户消费行为数据再到用户投资数据，支付宝的生态闭环可以说已经做得相当完美，再加上淘宝、阿里、口碑等等一些周边，马云爸爸的生态布局已经很庞大，从数据层面可以看得出来，数据自给自足是没问题的，更何况马云爸爸的格局很大，创造出更加庞大的生态圈也不是没有可能（比如达摩院）。但是仔细想一想马云爸爸的生态圈，很多数数据并不是爬虫得到的，阿里虽然也有自己的内部Spider框架，但是这绝不是这么大的企业赖以生存的依赖，而<strong>依赖的是他本身为用户提供的使用价值和所积累的各种属于自己的价值原生数据</strong>。</p>
+<p>       不得不承认，中国现在的IT圈子真的很浮躁，有点儿数据就叫大数据，有点儿算法就叫人工智能，有点儿技术就想圈钱，甚至什么都没有的就开始圈钱（假如空气币），随便搞个PDF起个白皮书，拉点儿交易所的关系就开始上币圈钱。爬虫这种方式可能只是我们这个浮躁的技术圈的一个缩影，但是无论如何不管时候，一个idea想要成功的实现，还是要有属于自己的核心价值，真正能为用户创造价值的东西才能让用户心甘情愿的为我们的idea提供前进的动力，而不光是从别的地方扒拉点儿别人的数据，东拼西凑成自己的数据，没有属于自己有价值的东西就算成功了也只是惊鸿一现，生命周期长的永远是有价值的东西。</p>
+<p>       好吧扯得有点远了，不管怎么样，爬虫现在的存在确实是有价值的，但是我们得自己敲一敲警钟，无论是从法律层面，还是从企业个人的发展层面，毕竟技术只是我们实现目标的一种方式。</p>
+<p>       还是朝着目标继续前行吧，迷失了目标还是挺可怕的。</p>
+<h4 id="Stay-hungry-Stay-foolish-Stay-yourself……"><a href="#Stay-hungry-Stay-foolish-Stay-yourself……" class="headerlink" title="Stay hungry,Stay foolish,Stay yourself……"></a><a href="#Stay-hungry-Stay-foolish-Stay-yourself%E2%80%A6%E2%80%A6" title="Stay hungry,Stay foolish,Stay yourself……"></a>Stay hungry,Stay foolish,Stay yourself……</h4>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    
+    <a class="pull-right" href="/2018/06/21/2018-06-21-%E6%8A%93%E5%8F%96%E7%99%BE%E5%BA%A6%E6%8C%87%E6%95%B0/">
+        抓取百度指数 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

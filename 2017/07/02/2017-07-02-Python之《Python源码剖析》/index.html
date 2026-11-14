@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Python之Python源码剖析 | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-07-02T12:00:00.000Z" itemprop="datePublished">
+          2017-07-02
+      </time>
+    
+</span>
+                <h1>Python之Python源码剖析</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>闲着无聊看了看《Python源码剖析》这本书，虽然这本书已经出版很多年了Python（CPython）的版本也是当时2.5的版本，但是2.7以及3.x都是从2.5一步一步走过来的，对我们研究Python思想的影响并不是很大。一刷看的不是特别仔细但是对Python的机制也收获了不少，当然了对于Python思想的学习还要继续，这里主要贴出一些自己收获的知识点把个人在学习过程中主观理解描述出来，以供大家学习参考，当然有路过的大牛可以帮我看一看，不对的地方请大家指正，谢谢～～</p>
+<p>       对于各种语言来说底层是绕不开词法、语法、语义的编译原理的，但是自底向上捋的方式又让大部分人头痛脑壳晕，所以选择了一自顶向下的方式来描述，这样可能让大多数人更好理解一点儿，我们开始吧</p>
+<hr>
+<h4 id="Python一切皆对象"><a href="#Python一切皆对象" class="headerlink" title="Python一切皆对象"></a><a href="#Python%E4%B8%80%E5%88%87%E7%9A%86%E5%AF%B9%E8%B1%A1" title="Python一切皆对象"></a>Python一切皆对象</h4><p>       “一切皆对象”应该是所有接触Python的人都知道的，这个“对象”是怎么实现的呢？记住<strong>PyObject</strong>这个东西，就是这个对象（PyVarObject是对PyObject的一个扩展）。</p>
+<p><img src="/images/Python_1.jpg"></p>
+<p>       上边这段代码是从Python源码中截的图，看源码时当然要有源码目录啦：</p>
+<p><img src="/images/Python_2.jpg"></p>
+<p>Python2.7主要目录：</p>
+<ul>
+<li>Include:包含了Python提供的所有头文件，用户需要用C或C++自定义自己的的扩展模块，那就要用这里提供的头文件。</li>
+<li>Lib:包含了Python自带的所有标准库，Lib中的库都是用Python语言编写。</li>
+<li>Modules:包含所有用C编写的对速度要求非常严格的模块，例random，而其他对速度没有太严格要求的比如os模块就是用Python编写并放在Lib目录下。</li>
+<li>Parser:包含<strong>Python解释器</strong>中的Scanner和Parser部分，即对Python代码进行<strong>词法分析和语法分析</strong>的部分。</li>
+<li>Objects:包含Python所有的内建对象（包括整数、list、dict等）以及运行时需要的所有的内部使用对象的实现。</li>
+<li>Python:包含Python解释器中Compiler和执行引擎部分，是<strong>Python运行核心</strong>。</li>
+</ul>
+<p>       在上边这些主要目录中，我们可以根据自己的实际情况学习，毕竟Python中核心还是要一步一步来学的，PyObject在哪我就不说了（大家自己找找看，找不到的话继续往下看）</p>
+<p>       回到PyObject，在Python内部，每一个对象都拥有相同的对象头部，也就使得对对象的引用变得非常的统一，我们<strong>只需要用一个PyObject* 指针就可以引用任意的一个对象，而不论该对象实际是一个什么对象</strong>。因为PyVarObject只是对PyObject的一个扩展，对于任何一个PyVarObject所占用的内存，开始部分的字节的意义和PyObject是一样的。这两个结构体里面的两个变量，其实都是些宏。从源中我们可以找到这些宏的展开：  </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* PyObject_HEAD */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* PyObject_HEAD defines the initial segment of every PyObject. */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PyObject_HEAD                   \</span></span><br><span class="line"><span class="meta">    _PyObject_HEAD_EXTRA                \</span></span><br><span class="line"><span class="meta">    Py_ssize_t ob_refcnt;               \</span></span><br><span class="line"><span class="meta">    struct _typeobject *ob_type; <span class="comment">/* 画重点了啊：ob_refcnt、ob_type、_typeobject */</span></span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* PyObject_VAR_HEAD */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* PyObject_VAR_HEAD defines the initial segment of all variable-size</span></span><br><span class="line"><span class="comment"> * container objects.  These end with a declaration of an array with 1</span></span><br><span class="line"><span class="comment"> * element, but enough space is malloc&#x27;ed so that the array actually</span></span><br><span class="line"><span class="comment"> * has room for ob_size elements.  Note that ob_size is an element count,</span></span><br><span class="line"><span class="comment"> * not necessarily a byte count.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PyObject_VAR_HEAD               \</span></span><br><span class="line"><span class="meta">    PyObject_HEAD                       \</span></span><br><span class="line"><span class="meta">    Py_ssize_t ob_size; <span class="comment">/* Number of items in variable part */</span></span></span><br></pre></td></tr></table></figure>
+
+<p>       实际上不难看出：PyObject_VAR_HEAD就是在PyObject的基础上，多了一个ob_size变量，用以标识对象的长度（是长度，不是内存占用）。也就是上边说的PyVarObject就是PyObject的一个扩展，于是在Python中，所有的对象都可以通过PyObject*指针来引用，使得很多操作变得统一（函数参数传递等）。</p>
+<p>       是否想到以前刚开始学习Python时接触的<strong>可变对象和不可变对象</strong>的概念？</p>
+<hr>
+<p>       一切皆对象的原因找到了，那Python实际应用中的Int类型、String类型、List类型、Dict类型等，他们又是怎么实现的呢？其实他们在Python中分别被定义为PyIntObject（Int形）、PyStringObject（String型）、PyListObject（List型）、PyDictObject（Dict型）等，其他成千上万的对象都是PyObject扩展属性。</p>
+<p><img src="/images/Python_3.jpg"></p>
+<p>       看到这儿你应该明白了吧？PyObject_HEAD和PyObject_VAR_HEAD实际就是<strong>不可变对象和可变对象</strong>的真正区别。是不是对图中（引用于《Python源码剖析》）的ob_refcnt、ob_type参数有点儿眼熟？他们就是前边PyObject_HEAD的宏展开的参数，参数作用如下：</p>
+<ul>
+<li><strong>ob_refcnt</strong>: 每个PyObject中都有一个ob_refcnt来计数当前对象被引用的次数**（GC机制中的引用计数）**</li>
+<li><strong>ob_type</strong>: 指向 _typeobject 指针ob_type，这个结构体用于表示<strong>对象类型</strong>。</li>
+</ul>
+<p>       还有一个参数是_typeobject。想一想一个对象在创建的时候需要多少内存、这个对象的类名是什么等等信息，又是如何记录和区分的呢？_typeobject（也就是PyTypeObject）可以被称：<strong>指定对象类型的类型对象</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">typeobject</span> &#123;</span></span><br><span class="line">    PyObject_VAR_HEAD</span><br><span class="line">    <span class="type">const</span> <span class="type">char</span> *tp_name; <span class="comment">/* For printing, in format &quot;&lt;module&gt;.&lt;name&gt;&quot; */</span></span><br><span class="line">    Py_ssize_t tp_basicsize, tp_itemsize; <span class="comment">/* For allocation */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Methods to implement standard operations */</span></span><br><span class="line"></span><br><span class="line">    destructor tp_dealloc;</span><br><span class="line">    printfunc tp_print;</span><br><span class="line">    getattrfunc tp_getattr;</span><br><span class="line">    setattrfunc tp_setattr;</span><br><span class="line">    cmpfunc tp_compare;</span><br><span class="line">    reprfunc tp_repr;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Method suites for standard classes */</span></span><br><span class="line"></span><br><span class="line">    PyNumberMethods *tp_as_number;</span><br><span class="line">    PySequenceMethods *tp_as_sequence;</span><br><span class="line">    PyMappingMethods *tp_as_mapping;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ******************这里很多内容因篇幅被省略*</span></span><br><span class="line"></span><br><span class="line">&#125; PyTypeObject;</span><br></pre></td></tr></table></figure>
+
+<p>       _typeobject存储了大量的信息，里面的每条信息被称为一个元信息，他们被用来支持对象地操作，例如：</p>
+<ul>
+<li>tp_name:类型名称</li>
+<li>tp_basicsize,tp_itemsize:创建类型对象时分配的内存大小信息。</li>
+<li>其他：对象操作（函数指针）</li>
+</ul>
+<p>       当然这只是一部分，还有其他更多的操作有兴趣的童鞋可以深入了解。</p>
+<p>       《Python源码剖析》将PyIntObject（Int形）、PyStringObject（String型）、PyListObject（List型）、PyDictObject（Dict型）等一系列类型分章节都描述的很清楚，还有其他例如NameSpace、import、PyCodeObject、线程实现等都写得很详细，当然啦刷一遍想搞清这些还是要点时间的，后续有时间还会再刷的，跟着看源码不仅让自己对Python更加深入，而且对平常编程熟练应用也是有好处的，推荐大家有时间看一看。对了，上边的C代码都在.&#x2F;Include&#x2F;object.h下，大家可以自己去学习啦。</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a><a href="#%E5%8F%82%E8%80%83" title="参考"></a>参考</h4><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/38791962?sort=createdd">https://www.zhihu.com/question/38791962?sort=createdd</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2017/07/12/2017-07-12-JupyterBook/" style="float: left;">
+        ← JupyterNoteBook
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/05/13/2017-05-13-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%B7%B7%E6%B7%86%E7%9F%A9%E9%98%B5/">
+        机器学习之混淆矩阵 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

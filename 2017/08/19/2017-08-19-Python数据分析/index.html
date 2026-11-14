@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Python数据分析---Numpy | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-08-19T12:00:00.000Z" itemprop="datePublished">
+          2017-08-19
+      </time>
+    
+</span>
+                <h1>Python数据分析---Numpy</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>因为工作上一直在跟数据打交道，无论是定向爬虫还是数据量化，总是以Python为核心，Python只是一种工具，其他工具的使用也无可厚非，在使用的过程中也感受到了花费更多的时间关注于问题本身而非其他的问题的快感，在看了《利用Python进行数据分析》这本书后更是深深体会到了Python的强大，这本书的作者就是Pandas库的作者，作者真的很走心，在贯穿数据处理的同时，不仅讲解了Numpy、Pandas而且也用实际的股票数据进行分析，良心书单推荐值得一看。今天把之前做的笔记稍微整理了一下再次做一下总结，主要是Numpy和Pandas的基本使用和常规用法，来，喷我～～</p>
+<h4 id="NumPy简介"><a href="#NumPy简介" class="headerlink" title="NumPy简介"></a><a href="#NumPy%E7%AE%80%E4%BB%8B" title="NumPy简介"></a>NumPy简介</h4><p>       老样子，来**<a target="_blank" rel="noopener" href="http://www.numpy.org/">官网</a>**走一波，Numpy的官网给我的感觉是最舒服的(可能我见识短吧0.0)，蓝色的基调搭配例子的详解，很容易就能学会很多他的用法，而且但是想要深入的话也是要花点时间精力的，不过相信聪明的你很快也是可以学会的。</p>
+<p>       NumPy是高性能的科学计算和数据分析的基础包。说白了就是用来处理数值数据，无非就是加减乘除，不过这里面向的对象是多维数组，当然最常见还是二维数组，也就是类似于表格数值形式的数据，有没有想到矩阵？在Numpy中，数组(ndarray)和矩阵(matrix)是存在不同数据类型的，而且计算也有点区别，要注意了哦。饭得一口一口吃，我们还是一点一点学吧。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="#%E5%AE%89%E8%A3%85" title="安装"></a>安装</h4><p>       Numpy的安装其实很简单，只要pip install 就好，在这里推荐用<strong>Anaconda3.x以上版本</strong>。他是一个开源的Python发行版本，其包含了conda、Python等180多个科学包及其依赖项。因为包含了大量的科学包，Anaconda 的**<a target="_blank" rel="noopener" href="https://www.anaconda.com/download/">下载文件</a>**比较大（约 515 MB），如果只需要某些包，或者需要节省带宽或存储空间，也可以使用Miniconda这个较小的发行版（仅包含conda和 Python）。Anaconda3.x中包含了Python3.x，因为2020年Python社区对2.7的更新会停止，所以我们还是早点适应Python3.0的环境比较好一点儿。更重要的是Anaconda中包含了Jupyter NoteBook、Numpy、Pandas等一系列众多科学计算常用库，所以只需安装Anaconda我们就可以直接使用，是不是很方便，而且安装也很简单，大家可以自行下载安装。</p>
+<p>NumPy中数数值的基本类型：</p>
+<p>基本类型</p>
+<p>类型代码</p>
+<p>说明</p>
+<p>int8、uint8</p>
+<p>i1、u1</p>
+<p>有符号和无符号8位整型（1字节）</p>
+<p>int16、uint16</p>
+<p>i2、u2</p>
+<p>有符号和无符号16位整型（2字节）</p>
+<p>int32、uint32</p>
+<p>i4、u4</p>
+<p>有符号和无符号32位整型（4字节）</p>
+<p>int64、uint64</p>
+<p>i8、u8</p>
+<p>有符号和无符号64位整型（8字节）</p>
+<p>float16</p>
+<p>f2</p>
+<p>半精度浮点数</p>
+<p>float32</p>
+<p>f4、f</p>
+<p>单精度浮点数</p>
+<p>float64</p>
+<p>f8、d</p>
+<p>双精度浮点数</p>
+<p>float128</p>
+<p>f16、g</p>
+<p>扩展精度浮点数</p>
+<p>complex64</p>
+<p>c8</p>
+<p>分别用两个32位表示的复数</p>
+<p>complex128</p>
+<p>c16</p>
+<p>分别用两个64位表示的复数</p>
+<p>complex256</p>
+<p>c32</p>
+<p>分别用两个128位表示的复数</p>
+<p>bool</p>
+<p>?</p>
+<p>布尔型</p>
+<p>object</p>
+<p>O</p>
+<p>python对象</p>
+<p>string</p>
+<p>Sn</p>
+<p>固定长度字符串，每个字符1字节，如S10</p>
+<p>unicode</p>
+<p>Un</p>
+<p>固定长度Unicode，字节数由系统决定，如U10</p>
+<p>生成函数</p>
+<p>作用</p>
+<p>np.array( x)</p>
+<p>将输入数据转化为一个ndarray</p>
+<p>np.array( x, dtype)</p>
+<p>将输入数据转化为一个类型为type的ndarray</p>
+<p>np.asarray( array )</p>
+<p>将输入数据转化为一个新的（copy）ndarray</p>
+<p>np.ones( N )</p>
+<p>生成一个N长度的一维全一ndarray</p>
+<p>np.ones( N, dtype)</p>
+<p>生成一个N长度类型是dtype的一维全一ndarray</p>
+<p>np.ones_like( ndarray )</p>
+<p>生成一个形状与参数相同的全一ndarray</p>
+<p>np.zeros( N)</p>
+<p>生成一个N长度的一维全零ndarray</p>
+<p>np.zeros( N, dtype)</p>
+<p>生成一个N长度类型位dtype的一维全零ndarray</p>
+<p>np.zeros_like(ndarray)</p>
+<p>类似np.ones_like( ndarray )</p>
+<p>np.empty( N )</p>
+<p>生成一个N长度的未初始化一维ndarray</p>
+<p>np.empty( N, dtype)</p>
+<p>生成一个N长度类型是dtype的未初始化一维ndarray</p>
+<p>np.empty(ndarray)</p>
+<p>类似np.ones_like( ndarray )</p>
+<p>np.eye( N )</p>
+<p>创建一个N * N的单位矩阵（对角线为1，其余为0）</p>
+<p>np.identity( N )</p>
+<p>只能获取方阵，也即标准意义的单位阵；</p>
+<p>np.tile()</p>
+<p>重复某个数组。tile(A,n)A重复n次。tile(A,(m,n))A重复m行n列</p>
+<p>np.arange( num)</p>
+<p>生成一个从0到num-1步数为1的一维ndarray</p>
+<p>np.arange( begin, end)</p>
+<p>生成一个从begin到end-1步数为1的一维ndarray</p>
+<p>np.arange( begin, end, step)</p>
+<p>生成一个从begin到end-step的步数为step的一维ndarray</p>
+<p>np.mershgrid(ndarray, ndarray,…)</p>
+<p>生成一个ndarray <em>ndarray</em> …的多维ndarray</p>
+<p>np.where(cond, ndarray1, ndarray2)</p>
+<p>根据条件cond，选取ndarray1或者ndarray2，返回一个新的ndarray</p>
+<p>np.in1d(ndarray, [x,y,…])</p>
+<p>检查ndarray中的元素是否等于[x,y,…]中的一个，返回bool数组</p>
+<p>矩阵函数</p>
+<p>说明</p>
+<p>np.diag( ndarray)</p>
+<p>以一维数组的形式返回方阵的对角线（或非对角线）元素</p>
+<p>np.diag( [x,y,…])</p>
+<p>将一维数组转化为方阵（非对角线元素为0）</p>
+<p>np.dot(ndarray, ndarray)</p>
+<p>矩阵乘法</p>
+<p>np.trace( ndarray)</p>
+<p>计算对角线元素的和</p>
+<p>排序函数</p>
+<p>说明</p>
+<p>np.sort( ndarray)</p>
+<p>排序，返回副本</p>
+<p>np.unique(ndarray)</p>
+<p>返回ndarray中的元素，排除重复元素之后，并进行排序</p>
+<p>np.intersect1d( ndarray1, ndarray2)</p>
+<p>返回二者的交集并排序。</p>
+<p>np.union1d( ndarray1, ndarray2)</p>
+<p>返回二者的并集并排序。</p>
+<p>np.setdiff1d( ndarray1, ndarray2)</p>
+<p>返回二者的差。</p>
+<p>np.setxor1d( ndarray1, ndarray2)</p>
+<p>返回二者的对称差</p>
+<p>一元计算函数</p>
+<p>说明</p>
+<p>np.abs(ndarray)</p>
+<p>计算绝对值</p>
+<p>np.fabs(ndarray)</p>
+<p>计算绝对值（非复数）</p>
+<p>np.mean(ndarray)</p>
+<p>求平均值</p>
+<p>np.sqrt(ndarray)</p>
+<p>计算x^0.5</p>
+<p>np.square(ndarray)</p>
+<p>计算x^2</p>
+<p>np.exp(ndarray)</p>
+<p>计算e^x</p>
+<p>log、log10、log2、log1p</p>
+<p>计算自然对数、底为10的log、底为2的log、底为(1+x)的log</p>
+<p>np.sign(ndarray)</p>
+<p>计算正负号：1（正）、0（0）、-1（负）</p>
+<p>np.ceil(ndarray)</p>
+<p>计算大于等于改值的最小整数</p>
+<p>np.floor(ndarray)</p>
+<p>计算小于等于该值的最大整数</p>
+<p>np.rind(ndarray)</p>
+<p>四舍五入到最近的整数，保留dtype</p>
+<p>np.modf(ndarray)</p>
+<p>将数组的小数和整数部分以两个独立的数组方式返回</p>
+<p>np.isnan(ndarray)</p>
+<p>返回一个判断是否是NaN的bool型数组</p>
+<p>np.isfinite(ndarray)</p>
+<p>返回一个判断是否是有穷（非inf，非NaN）的bool型数组</p>
+<p>np.isinf(ndarray)</p>
+<p>返回一个判断是否是无穷的bool型数组</p>
+<p>cos、cosh、sin、sinh、tan、tanh</p>
+<p>普通型和双曲型三角函数</p>
+<p>arccos、arccosh、arcsin、arcsinh、arctan、arctanh</p>
+<p>反三角函数和双曲型反三角函数</p>
+<p>np.logical_not(ndarray)</p>
+<p>计算各元素not x的真值，相当于-ndarray</p>
+<p>多元计算函数</p>
+<p>说明</p>
+<p>np.add(ndarray, ndarray)</p>
+<p>相加</p>
+<p>np.subtract(ndarray, ndarray)</p>
+<p>相减</p>
+<p>np.multiply(ndarray, ndarray)</p>
+<p>乘法</p>
+<p>np.divide(ndarray, ndarray)</p>
+<p>除法</p>
+<p>np.floor_divide(ndarray, ndarray)</p>
+<p>圆整除法（丢弃余数）</p>
+<p>np.power(ndarray, ndarray)</p>
+<p>次方</p>
+<p>np.mod(ndarray, ndarray)</p>
+<p>求模</p>
+<p>np.maximum(ndarray, ndarray)</p>
+<p>求最大值</p>
+<p>np.fmax(ndarray, ndarray)</p>
+<p>求最大值（忽略NaN）</p>
+<p>np.minimun(ndarray, ndarray)</p>
+<p>求最小值</p>
+<p>np.fmin(ndarray, ndarray)</p>
+<p>求最小值（忽略NaN）</p>
+<p>np.copysign(ndarray, ndarray)</p>
+<p>将参数2中的符号赋予参数1</p>
+<p>np.greater(ndarray, ndarray)</p>
+<p>&gt;</p>
+<p>np.greater_equal(ndarray, ndarray)</p>
+<p>&gt;&#x3D;</p>
+<p>np.less(ndarray, ndarray)</p>
+<p>&lt;</p>
+<p>np.less_equal(ndarray, ndarray)</p>
+<p>&lt;&#x3D;</p>
+<p>np.equal(ndarray, ndarray)</p>
+<p>=&#x3D;</p>
+<p>np.not_equal(ndarray, ndarray)</p>
+<p>!&#x3D;</p>
+<p>logical_and(ndarray, ndarray)</p>
+<p>&amp;</p>
+<p>logical_or(ndarray, ndarray)</p>
+<p>logical_xor(ndarray, ndarray)</p>
+<p>^</p>
+<p>np.dot( ndarray, ndarray)</p>
+<p>计算两个ndarray的矩阵内积</p>
+<p>np.ix_([x,y,m,n],…)</p>
+<p>生成一个索引器，用于Fancy indexing(花式索引)</p>
+<p>文件读写</p>
+<p>说明</p>
+<p>np.save(string, ndarray)</p>
+<p>将ndarray保存到文件名为 [string].npy 的文件中（无压缩）</p>
+<p>np.savez(string, ndarray1, ndarray2, …)</p>
+<p>将所有的ndarray压缩保存到文件名为[string].npy的文件中</p>
+<p>np.savetxt(sring, ndarray, fmt, newline&#x3D;’\n’)</p>
+<p>将ndarray写入文件，格式为fmt</p>
+<p>np.load(string)</p>
+<p>读取文件名string的文件内容并转化为ndarray对象（或字典对象）</p>
+<p>np.loadtxt(string, delimiter)</p>
+<p>读取文件名string的文件内容，以delimiter为分隔符转化为ndarray</p>
+<p>ndarray函数</p>
+<p>属性</p>
+<p>ndarray.ndim</p>
+<p>获取ndarray的维数</p>
+<p>ndarray.shape</p>
+<p>获取ndarray各个维度的长度</p>
+<p>ndarray.dtype</p>
+<p>获取ndarray中元素的数据类型</p>
+<p>ndarray.T</p>
+<p>简单转置矩阵ndarray</p>
+<p>ndarray函数</p>
+<p>说明</p>
+<p>ndarray.astype(dtype)</p>
+<p>转换类型，若转换失败则会出现TypeError</p>
+<p>ndarray.copy()</p>
+<p>复制一份ndarray(新的内存空间)</p>
+<p>ndarray.reshape((N,M,…))</p>
+<p>将ndarray转化为N_M_…的多维ndarray（非copy）</p>
+<p>ndarray.transpose((xIndex,yIndex,…))</p>
+<p>根据维索引xIndex,yIndex…进行矩阵转置，依赖于shape，不能用于一维矩阵（非copy）</p>
+<p>ndarray.swapaxes(xIndex,yIndex)</p>
+<p>交换维度（非copy）</p>
+<p>计算函数</p>
+<p>说明</p>
+<p>ndarray.mean( axis&#x3D;0 )</p>
+<p>求平均值</p>
+<p>ndarray.sum( axis&#x3D; 0)</p>
+<p>求和</p>
+<p>ndarray.cumsum( axis&#x3D;0)</p>
+<p>累加</p>
+<p>ndarray.cumprod( axis&#x3D;0)</p>
+<p>累乘</p>
+<p>ndarray.std()</p>
+<p>方差</p>
+<p>ndarray.var()</p>
+<p>标准差</p>
+<p>ndarray.max()</p>
+<p>最大值</p>
+<p>ndarray.min()</p>
+<p>最小值</p>
+<p>ndarray.argmax()</p>
+<p>最大值索引</p>
+<p>ndarray.argmin()</p>
+<p>最小值索引</p>
+<p>ndarray.any()</p>
+<p>是否至少有一个True</p>
+<p>ndarray.all()</p>
+<p>是否全部为True</p>
+<p>ndarray.dot( ndarray)</p>
+<p>计算矩阵内积</p>
+<p>排序函数</p>
+<p>说明</p>
+<p>ndarray.sort(axis&#x3D;0)</p>
+<p>排序，返回源数据</p>
+<p>ndarray[n]</p>
+<p>选取第n+1个元素</p>
+<p>ndarray[n:m]</p>
+<p>选取第n+1到第m个元素</p>
+<p>ndarray[:]</p>
+<p>选取全部元素</p>
+<p>ndarray[n:]</p>
+<p>选取第n+1到最后一个元素</p>
+<p>ndarray[:n]</p>
+<p>选取第0到第n个元素</p>
+<p>ndarray[ bool_ndarray ]</p>
+<p>选取为true的元素.注：bool_ndarray表示bool类型的ndarray</p>
+<p>ndarray[[x,y,m,n]]</p>
+<p>选取顺序和序列为x、y、m、n的ndarray</p>
+<p>ndarray[n,m]</p>
+<p>选取第n+1行第m+1个元素</p>
+<p>其他函数</p>
+<p>说明</p>
+<p>seed()</p>
+<p>确定随机数生成种子</p>
+<p>permutation(int)</p>
+<p>返回一个一维从0~9的序列的随机排列</p>
+<p>permutation(ndarray)</p>
+<p>返回一个序列的随机排列</p>
+<p>shuffle(ndarray)</p>
+<p>对一个序列就地随机排列</p>
+<p>rand(int)</p>
+<p>产生int个均匀分布的样本值</p>
+<p>randint(begin,end,num&#x3D;1)</p>
+<p>从给定的begin和end随机选取num个整数</p>
+<p>randn(N, M, …)</p>
+<p>生成一个N_M_…的正态分布（平均值为0，标准差为1）的ndarray</p>
+<p>normal(size&#x3D;(N,M,…))</p>
+<p>生成一个N_M_…的正态（高斯）分布的ndarray</p>
+<p>beta(ndarray1,ndarray2)</p>
+<p>产生beta分布的样本值，参数必须大于0</p>
+<p>chisquare()</p>
+<p>产生卡方分布的样本值</p>
+<p>gamma()</p>
+<p>产生gamma分布的样本值</p>
+<p>uniform()</p>
+<p>产生在[0,1)中均匀分布的样本值</p>
+<p>det(ndarray)</p>
+<p>计算矩阵列式</p>
+<p>eig(ndarray)</p>
+<p>计算方阵的本征值和本征向量</p>
+<p>inv(ndarray)</p>
+<p>计算方阵的逆</p>
+<p>pinv(ndarray)</p>
+<p>计算方阵的Moore-Penrose伪逆</p>
+<p>qr(ndarray)</p>
+<p>计算qr分解</p>
+<p>svd(ndarray)</p>
+<p>计算奇异值分解svd</p>
+<p>solve(ndarray)</p>
+<p>解线性方程组Ax &#x3D; b，其中A为方阵</p>
+<p>lstsq(ndarray)</p>
+<p>计算Ax&#x3D;b的最小二乘解</p>
+<p>       其实对于以上函数虽然看起来多，但是实际也多0.0，这些函数的使用主要还是依赖于<strong>矩阵</strong>和<strong>数组</strong>的基本运算，尤其是numpy中的**<a target="_blank" rel="noopener" href="https://docs.scipy.org/doc/numpy-dev/user/quickstart.html#broadcasting-rules">广播运算</a>**，这里大家可以去官网查看学习，本质上数据分析还是要求对量化数据的数学敏感性，至于计算无论是Python，R还是Matlab都是工具罢了，核心重点还是数学。</p>
+<h4 id="Stay-hungry-Stay-foolish-Stay-yourself……"><a href="#Stay-hungry-Stay-foolish-Stay-yourself……" class="headerlink" title="Stay hungry,Stay foolish,Stay yourself……"></a><a href="#Stay-hungry-Stay-foolish-Stay-yourself%E2%80%A6%E2%80%A6" title="Stay hungry,Stay foolish,Stay yourself……"></a>Stay hungry,Stay foolish,Stay yourself……</h4>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2017/09/05/2017-09-05-Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90-Pandas/" style="float: left;">
+        ← Python数据分析---Pandas
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/08/10/2017-08-10-(%E8%91%A3%E4%BC%9F%E6%98%8E%E8%80%81%E5%B8%88)%E4%BD%BF%E7%94%A8Python%E8%BF%9B%E8%A1%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-asyncio%E7%AF%87/">
+        (董伟明老师)使用Python进行并发编程-asyncio篇 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

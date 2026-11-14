@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>深度学习之TensorFlow初探 | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2017-07-29T12:00:00.000Z" itemprop="datePublished">
+          2017-07-29
+      </time>
+    
+</span>
+                <h1>深度学习之TensorFlow初探</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>跟着一位大牛接触了一段时间深度学习很感谢他带我入门，当然啦还是要膜拜一下“花书”，后来接触过程中发现这个东西还是有点意思的，尤其是看到TensorBoard这个神奇的可视化工具后感觉像是Google为我们开了一扇新的大门。其实Google对于TensorFlow的版本迭代更新差不多两个多月就有一个更新，可见Google对TensorFlow的重视程度，从TPU的推进和TensorFlow的更新就可以看出Google的生态圈正在逐步完善，应该离形成闭环也不远了，可以想像Google的生态圈将会更加强大和稳健。</p>
+<h4 id="TensorFlow简介"><a href="#TensorFlow简介" class="headerlink" title="TensorFlow简介"></a><a href="#TensorFlow%E7%AE%80%E4%BB%8B" title="TensorFlow简介"></a>TensorFlow简介</h4><p>       TensorFlow实际上Tensor（张量）和Flow（流）的合成词，我们可以先理解为<strong>数据流动</strong>（我是这么理解的），大家有不同的理解方式可以提出来一起学习，**<a target="_blank" rel="noopener" href="http://www.tensorfly.cn/">TensorFlow的中文社区</a><strong>做的挺好，可以做为入门参考，毕竟它更新太快我们还是尽量参考<a target="_blank" rel="noopener" href="https://tensorflow.google.cn/">官网</a></b></font>最好，另外</strong><a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/tensorflow-zh/">极客学院</a>**也对其做了一次中文翻译，大家可以根据自己不同的情况进行学习。</p>
+<p>       虽然Google开源了TensorFlow，在简化我们工作的同时本质上还是要用扎实的理论知识做支撑，我们还是要做好基础然后再用TensorFlow做一些实践，两者相结合进行学习，当然这是我的学习过程，大学觉得有好的可以提出来一起学习。</p>
+<p>       TensorFlow是一个采用数据流图（data flow graphs），用于数值计算的开源软件库。节点（Nodes）在图中表示数学操作，图中的线（edges）则表示在节点间相互联系的多维数据数组，即张量（tensor）。它灵活的架构让你可以在多种平台上展开计算，例如台式计算机中的一个或多个CPU（或GPU），服务器，移动设备等等。</p>
+<p><img src="/images/tensors_flowing.gif"></p>
+<p>       上边图就是数据流图（Data Flow Graph），我们就可以通过编程作图并控制数据流动，数据流图用“结点”（nodes）和“线”(edges)的有向图来描述数学计算。“节点” 一般用来表示施加的数学操作，但也可以表示数据输入（feed in）的起点&#x2F;输出（push out）的终点，或者是读取&#x2F;写入持久变量（persistent variable）的终点。“线”表示“节点”之间的输入&#x2F;输出关系。这些数据“线”可以输运“size可动态调整”的多维数据数组，即“张量”（tensor）。张量从图中流过的直观图像是这个工具取名为“Tensorflow”的原因。一旦输入端的所有张量准备好，节点将被分配到各种计算设备完成异步并行地执行运算。</p>
+<hr>
+<h4 id="TensorFlow编程"><a href="#TensorFlow编程" class="headerlink" title="TensorFlow编程"></a><a href="#TensorFlow%E7%BC%96%E7%A8%8B" title="TensorFlow编程"></a>TensorFlow编程</h4><p>       操作时我们要记住TensorFlow两个概念：<strong>图(Graph)<strong>和</strong>会话(Session)</strong></p>
+<ul>
+<li>使用图 (graph) 来表示计算任务.</li>
+<li>在被称之为 会话 (Session) 的上下文 (context) 中执行图.</li>
+<li>使用 tensor 表示数据.</li>
+<li>通过 变量 (Variable) 维护状态.</li>
+<li>使用 feed 和 fetch 可以为任意的操作(arbitrary operation) 赋值或者从其中获取数据.</li>
+</ul>
+<h4 id="图"><a href="#图" class="headerlink" title="图"></a><a href="#%E5%9B%BE" title="图"></a>图</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个常量 op, 产生一个 1x2 矩阵. 这个 op 被作为一个节点加到默认图中.[图也可以不用默认图，自己创建]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 构造器的返回值代表该常量 op 的返回值.</span></span><br><span class="line">matrix1 = tf.constant([[3., 3.]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建另外一个常量 op, 产生一个 2x1 矩阵.</span></span><br><span class="line">matrix2 = tf.constant([[2.],[2.]])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个矩阵乘法 matmul op , 把 &#x27;matrix1&#x27; 和 &#x27;matrix2&#x27; 作为输入.</span></span><br><span class="line"><span class="comment"># 返回值 &#x27;product&#x27; 代表矩阵乘法的结果.</span></span><br><span class="line">product = tf.matmul(matrix1, matrix2)</span><br></pre></td></tr></table></figure>
+
+<p>       以上只是在默认图中加入了结点，回想一下上面那张动图，现在我们已经把图画出来了，但是数据还没有流动，我们要用一个Session把数据跑起来。</p>
+<h4 id="会话"><a href="#会话" class="headerlink" title="会话"></a><a href="#%E4%BC%9A%E8%AF%9D" title="会话"></a>会话</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动默认图.</span></span><br><span class="line">sess = tf.Session()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用 sess 的 &#x27;run()&#x27; 方法来执行矩阵乘法 op, 传入 &#x27;product&#x27; 作为该方法的参数.</span></span><br><span class="line"><span class="comment"># 上面提到, &#x27;product&#x27; 代表了矩阵乘法 op 的输出, 传入它是向方法表明, 我们希望取回</span></span><br><span class="line"><span class="comment"># 矩阵乘法 op 的输出.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 整个执行过程是自动化的, 会话负责传递 op 所需的全部输入. op 通常是并发执行的.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 函数调用 &#x27;run(product)&#x27; 触发了图中三个 op (两个常量 op 和一个矩阵乘法 op) 的执行.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 返回值 &#x27;result&#x27; 是一个 numpy `ndarray` 对象.</span></span><br><span class="line">result = sess.run(product)</span><br><span class="line"><span class="built_in">print</span> result</span><br><span class="line"><span class="comment"># ==&gt; [[ 12.]]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 任务完成, 关闭会话.</span></span><br><span class="line">sess.close()</span><br></pre></td></tr></table></figure>
+
+<p>       Session 对象在使用完后需要关闭以释放资源. 除了显式调用 close 外, 也可以使用 “with” 代码块 来自动完成关闭动作.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">with tf.Session() as sess:</span><br><span class="line">  result = sess.run([product])</span><br><span class="line">  <span class="built_in">print</span> result</span><br></pre></td></tr></table></figure>
+
+<p>       上边就是Tensor在Graph中的一次Flow，但是Tensor（张量数据）本身是有属性的：阶(Rank)、形状(Shape)、数据类型(Type)，<strong><a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/tensorflow-zh/resources/dims_types.html">详情参考</a></strong>。</p>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a><a href="#%E5%8F%98%E9%87%8F" title="变量"></a>变量</h4><p>       变量(Variables for more details)维护图执行过程中的状态信息. 下面的例子演示了如何使用变量:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个变量, 初始化为标量 0.</span></span><br><span class="line">state = tf.Variable(0, name=<span class="string">&quot;counter&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 op, 其作用是使 state 增加 1</span></span><br><span class="line">one = tf.constant(1)</span><br><span class="line">new_value = tf.add(state, one)</span><br><span class="line">update = tf.assign(state, new_value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动图后, 变量必须先经过`初始化` (init) op 初始化,</span></span><br><span class="line"><span class="comment"># 首先必须增加一个`初始化` op 到图中.</span></span><br><span class="line">init_op = tf.initialize_all_variables()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动图, 运行 op</span></span><br><span class="line">with tf.Session() as sess:</span><br><span class="line">  <span class="comment"># 运行 &#x27;init&#x27; op</span></span><br><span class="line">  sess.run(init_op)</span><br><span class="line">  <span class="comment"># 打印 &#x27;state&#x27; 的初始值</span></span><br><span class="line">  <span class="built_in">print</span> sess.run(state)</span><br><span class="line">  <span class="comment"># 运行 op, 更新 &#x27;state&#x27;, 并打印 &#x27;state&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> _ <span class="keyword">in</span> range(3):</span><br><span class="line">    sess.run(update)</span><br><span class="line">    <span class="built_in">print</span> sess.run(state)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出:</span></span><br><span class="line"><span class="comment"># 0</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure>
+
+<p>       代码中 assign() 操作是图所描绘的表达式的一部分, 正如 add() 操作一样. 所以在调用 run() 执行表达式之前, 它并不会真正执行赋值操作.通常会将一个统计模型中的参数表示为一组变量. 例如, 你可以将一个神经网络的权重作为某个变量存储在一个 tensor 中. 在训练过程中, 通过重复运行训练图, 更新这个 tensor.</p>
+<h4 id="Fetch"><a href="#Fetch" class="headerlink" title="Fetch"></a><a href="#Fetch" title="Fetch"></a>Fetch</h4><p>       为了取回操作的输出内容, 可以在使用 Session 对象的 run() 调用 执行图时, 传入一些 tensor, 这些 tensor 会帮助你取回结果. 在之前的例子里, 我们只取回了单个节点 state, 但是你也可以取回多个 tensor:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">input1 = tf.constant(3.0)</span><br><span class="line">input2 = tf.constant(2.0)</span><br><span class="line">input3 = tf.constant(5.0)</span><br><span class="line">intermed = tf.add(input2, input3)</span><br><span class="line">mul = tf.mul(input1, intermed)</span><br><span class="line"></span><br><span class="line">with tf.Session() as sess:</span><br><span class="line">  result = sess.run([mul, intermed])</span><br><span class="line">  <span class="built_in">print</span> result</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出:</span></span><br><span class="line"><span class="comment"># [array([ 21.], dtype=float32), array([ 7.], dtype=float32)]</span></span><br><span class="line"><span class="comment">#需要获取的多个 tensor 值，在 op 的一次运行中一起获得（而不是逐个去获取 tensor）。</span></span><br></pre></td></tr></table></figure>
+
+<p>       上述示例在计算图中引入了 tensor, 以常量或变量的形式存储. TensorFlow 还提供了 feed 机制, 该机制 可以临时替代图中的任意操作中的 tensor 可以对图中任何操作提交补丁, 直接插入一个 tensor.</p>
+<h4 id="Feed"><a href="#Feed" class="headerlink" title="Feed"></a><a href="#Feed" title="Feed"></a>Feed</h4><p>       feed 使用一个 tensor 值临时替换一个操作的输出结果. 你可以提供 feed 数据作为 run() 调用的参数. feed 只在调用它的方法内有效, 方法结束, feed 就会消失. 最常见的用例是将某些特殊的操作指定为 “feed” 操作, 标记的方法是使用 tf.placeholder() 为这些操作创建占位符.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">input1 = tf.placeholder(tf.float32)</span><br><span class="line">input2 = tf.placeholder(tf.float32)</span><br><span class="line">output = tf.mul(input1, input2)</span><br><span class="line"></span><br><span class="line">with tf.Session() as sess:</span><br><span class="line">  <span class="built_in">print</span> sess.run([output], feed_dict=&#123;input1:[7.], input2:[2.]&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出:</span></span><br><span class="line"><span class="comment"># [array([ 14.], dtype=float32)]</span></span><br><span class="line"><span class="comment">#for a larger-scale example of feeds. 如果没有正确提供 feed, placeholder() 操作将会产生错误. MNIST 全连通 feed 教程 (source code) 给出了一个更大规模的使用 feed 的例子.</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>       TensorFlow简单的主要流程就是这样，在理解了这些基础概念后我们还是要对理论本身和理解数据做深究，毕竟只有彼此相结合才能更好地做出自己想要的模型，一起努力学习吧！</p>
+<h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a><a href="#%E5%8F%82%E8%80%83" title="参考"></a>参考</h4><p><a target="_blank" rel="noopener" href="http://www.tensorfly.cn/">http://www.tensorfly.cn/</a><br><a target="_blank" rel="noopener" href="http://www.tensorfly.cn/tfdoc/tutorials/overview.html">http://www.tensorfly.cn/tfdoc/tutorials/overview.html</a><br><a target="_blank" rel="noopener" href="http://wiki.jikexueyuan.com/project/tensorflow-zh/how_tos/summaries_and_tensorboard.html">http://wiki.jikexueyuan.com/project/tensorflow-zh/how_tos&#x2F;summaries_and_tensorboard.html</a></p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2017/08/10/2017-08-10-(%E8%91%A3%E4%BC%9F%E6%98%8E%E8%80%81%E5%B8%88)%E4%BD%BF%E7%94%A8Python%E8%BF%9B%E8%A1%8C%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-asyncio%E7%AF%87/" style="float: left;">
+        ← (董伟明老师)使用Python进行并发编程-asyncio篇
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/07/12/2017-07-12-JupyterBook/">
+        JupyterNoteBook →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>抓取百度指数 | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-06-21T12:00:00.000Z" itemprop="datePublished">
+          2018-06-21
+      </time>
+    
+</span>
+                <h1>抓取百度指数</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>最近搞了一波关键字百度指数的爬虫，虽然百度指数一直在更新，但是我们爬虫党也不能示弱，虽然在抓取过程中也遇到了一些小挫折，但是最终还是把他整出来了，嘿嘿，把思路和代码贴在这里以供有需求的人参考，大家要是有什么新的思路和想法也可以一起交流探讨。</p>
+<p>       PS:神剑手也是可以的，这里贴个**<a target="_blank" rel="noopener" href="http://blog.shenjianshou.cn/?p=170">入口</a>**，不过他的思路完全正确，就是广告打的硬了点儿。</p>
+<p>       百度指数最大难点在于指数是以<strong>图片形式显示</strong>，而不像搜狗搜索指数是以文本形式的数据显示，当然可能就有人会说这有什么难的，用常用的tessoract-ocr经过图片训练就可以达到理想的效果，事实确实如此，不像MNIST数据集得用到TensorFlow来训练模型，当然这里要是想尝试也是可以的，因为我们之后得到的指数图片集无论是大小还是像素都是非常规整的，用来训练是完全可以的。</p>
+<p>       不过个人采用tessoract-ocr对百度指数图片经过训练后最后达到100%的识别率也是挺满意的，百度指数的图片数字都是非常标准的，就是图片背景需要做一些处理，所以识别出的结果经过识别后达到这个效果也算是正常吧。</p>
+<p>        <strong>真正的难点</strong>是百度指数图片是js动态加载的随着真实数字的变化而变化，而不是直接挂出生成图片的链接。</p>
+<p>       这个关子先卖着了，还是从头缕整个思路吧。</p>
+<hr>
+<h4 id="模拟登录"><a href="#模拟登录" class="headerlink" title="模拟登录"></a><a href="#%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95" title="模拟登录"></a>模拟登录</h4><p>       百度目前对于每个百度账号的指数查询是有限制的，单个账号应该是在300的峰值，假如我们的keyword很多的话可以通过其他途径获取账号建立cookie池防止被ban。当然百度这种网站的模拟登录肯定会有之前大牛写的demo，站在巨人的肩膀上我们也会省事儿很多，大家要是想研究一下可以自己研究，这里贴出**<a target="_blank" rel="noopener" href="https://github.com/qiyeboy/baidulogin">百度模拟登录入口</a>**。</p>
+<h4 id="搜索指数"><a href="#搜索指数" class="headerlink" title="搜索指数"></a><a href="#%E6%90%9C%E7%B4%A2%E6%8C%87%E6%95%B0" title="搜索指数"></a>搜索指数</h4><p>       接下来就是我们重点关键字指数图片。其实不管是整体日均值、移动日均值，还是下边曲线图中的每日指数都是一套代码，只不过是获取span的时候请求不太一样，可以根据需求酌情考虑。</p>
+<p>       <strong>整体思路</strong>：通过cookie池模拟请求获取到span后，将span内容放入容器html标签中(下面代码已贴出)，然后用PhantomJS进行图片渲染后截图保存图片到本地，图片处理后紧接着就是我们的图片识别。</p>
+<p><img src="/images/baiduindex.jpeg"></p>
+<p>在模拟keyword搜索时，图中这个URL就是核心span。</p>
+<p><img src="/images/baidu1.jpg"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- html_head --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">&quot;http://index.baidu.com/&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;background:#fff;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"><span class="selector-class">.imgval</span> <span class="selector-class">.imgtxt</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: block;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">19200px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: -<span class="number">2px</span>;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.imgval</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">display</span>: inline-block;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">12px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-bottom</span>: -<span class="number">2px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;profWagv&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;viewbox&quot;</span> <span class="attr">class</span>=<span class="string">&quot;viewbox&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: block; left: 773px; top: 543px;&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;view-bd&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;view-table-wrap&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;view-bg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;view-bd&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;view-table-wrap&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">&quot;trendPopTab&quot;</span> <span class="attr">class</span>=<span class="string">&quot;view-table&quot;</span> <span class="attr">style</span>=<span class="string">&quot;font-family:simsun;&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">tbody</span>&gt;</span><span class="tag">&lt;<span class="name">tr</span>&gt;</span>            <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;view-dot&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;background:#3ec7f5&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span>            <span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;view-label&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;view-value&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- html_span --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 把获取到span放置在这里 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- html_foot --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span><span class="tag">&lt;/<span class="name">tbody</span>&gt;</span><span class="tag">&lt;/<span class="name">table</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;view-bg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>       然后用PhantomJS渲染后，用get_screenshot_as_file截图保存后用ocr进行识别ok了。是不是看起来感觉很简单？看着还是那么一回事儿，但是在解决过程中还是有不少坑要跳。</p>
+<p>       首先是span标签的获取。分析URL会发现在get时不仅要keyword，还要<strong>res、res2、res3</strong>三个参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">driver = webdriver.PhantomJS()</span><br><span class="line">driver.get(<span class="string">&#x27;https://index.baidu.com/&#x27;</span>)</span><br><span class="line">driver.delete_all_cookies()</span><br><span class="line"><span class="comment"># driver.add_cookie后再请求keyword</span></span><br><span class="line">driver.get(</span><br><span class="line">            <span class="string">&#x27;https://index.baidu.com/?tpl=trend&amp;word=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(quote(key_word, encoding=<span class="string">&#x27;gb18030&#x27;</span>)))</span><br><span class="line">res = driver.execute_script(<span class="string">&quot;return PPval.ppt;&quot;</span>)</span><br><span class="line">res2 = driver.execute_script(<span class="string">&quot;return PPval.res2;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>       res,res2获取到之后我们再获取res3，因为res3的获取需要带res和res2的get请求(<a target="_blank" rel="noopener" href="https://index.baidu.com/Interface/Search/getAllIndex/)(%E8%BF%99%E9%87%8C%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E6%8A%93%E5%8C%85%E8%87%AA%E8%A1%8C%E5%88%86%E6%9E%90)%E3%80%82">https://index.baidu.com/Interface/Search/getAllIndex/)(这里可以自己抓包自行分析)。</a></p>
+<p>在res、res2、res3全部获取到之后就可以获取span标签。  </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">get_span_params = &#123;</span><br><span class="line">            <span class="string">&quot;res&quot;</span>: res,</span><br><span class="line">            <span class="string">&quot;res2&quot;</span>: res2,</span><br><span class="line">            <span class="string">&quot;res3[]&quot;</span>: res3_dict.get(res3),</span><br><span class="line">            <span class="string">&quot;classType&quot;</span>: <span class="string">&quot;2&quot;</span>,</span><br><span class="line">            <span class="string">&quot;className&quot;</span>: <span class="string">&quot;profWagv&quot;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">_html_span = requests.get(get_span_url, params=get_span_params, cookies=read_cookie, timeout=<span class="number">5</span>)</span><br><span class="line"><span class="comment"># 这里就会得到我们最上边的那个span的json，解析后得到span放入html中就可以了</span></span><br></pre></td></tr></table></figure>
+
+<p>       接下来就是PhantomJS渲染html得到图片内容，这里有个坑因为有时会渲染不出来，嘿嘿，后来发现必须是带cookie渲染（这里真的浪费了不少时间0.0）。</p>
+<p>       成功渲染后我们就可以截图保存至本地，因为曲线图指数渲染后的图片是<strong>黑底白字</strong>，这里要做一个图片像素处理，处理成下边这种图。</p>
+<p><img src="/images/211_all.png"></p>
+<p>       至此，整个指数获取流程就算结束了，因为这里的数字很标准，后边的ocr识别采用tessoract-ocr，对于一些异常数据我们可以用jTessBoxEditor对识别数字进行训练后，得到自己的baiduIndex.traineddate，这里的指数图片尽可能多一点儿，我用了120张，矫正后100%的正确率还是可以的，<strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/cnlian/p/5765871.html">tessoract-ocr训练入口</a></strong>。</p>
+<p>       看完是不是还觉得简单？做一做就知道了。这篇记录的只是百度指数抓取的解决方案，分析流程并没有贴出来有兴趣的可以自己分析一下，当然啦，可能我的解决方案并不是最好的，如果大家有什么好的解决思路可以提出来一起学习。</p>
+<h4 id="Stay-hungry-Stay-foolish-Stay-yourself……"><a href="#Stay-hungry-Stay-foolish-Stay-yourself……" class="headerlink" title="Stay hungry,Stay foolish,Stay yourself……"></a><a href="#Stay-hungry-Stay-foolish-Stay-yourself%E2%80%A6%E2%80%A6" title="Stay hungry,Stay foolish,Stay yourself……"></a>Stay hungry,Stay foolish,Stay yourself……</h4>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/07/25/2018-07-25-%E7%88%AC%E8%99%AB%E7%9A%84%E6%B3%95%E5%BE%8B%E7%BA%A0%E7%BA%B7/" style="float: left;">
+        ← 扒一扒爬虫路上的坑
+    </a>
+    
+    
+    <a class="pull-right" href="/2018/03/05/2018-03-05-Docker-Scrapy%E5%88%86%E5%B8%83%E5%BC%8F/">
+        Docker+Scrapy分布式 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>

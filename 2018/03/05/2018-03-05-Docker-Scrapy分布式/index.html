@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********  Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<!--<![endif]-->
+
+<head>
+  <title>Docker+Scrapy分布式 | 白柏翁</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="白柏翁">
+    <meta name="author" content="speedor">
+    <meta name="description" content="Always Creative." />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="白柏翁" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+  
+  
+  
+
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a target="_blank" rel="noopener" href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a target="_blank" rel="noopener" href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/LT__logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">白柏翁</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-03-05T12:00:00.000Z" itemprop="datePublished">
+          2018-03-05
+      </time>
+    
+</span>
+                <h1>Docker+Scrapy分布式</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>最近由于工作原因，要求数据抓取及更新要达到毫秒级的需求，虽然经过业务分析后发现实现起来不太现实，但是经过自己的优化处理后最终能达到秒级更新还是可以的，至于数据内容就不详细说了(公司原因，请大家见谅)，不过在这里还是把实现过程中的坑跟大家分享一下，有什么不对的地方还请大家指正优化。</p>
+<hr>
+<h3 id="环境：CentOS7-x-Docker17-x-Scrapy1-5"><a href="#环境：CentOS7-x-Docker17-x-Scrapy1-5" class="headerlink" title="环境：CentOS7.x + Docker17.x + Scrapy1.5"></a><a href="#%E7%8E%AF%E5%A2%83%EF%BC%9ACentOS7-x-Docker17-x-Scrapy1-5" title="环境：CentOS7.x + Docker17.x + Scrapy1.5"></a>环境：CentOS7.x + Docker17.x + Scrapy1.5</h3><p>       选择环境时，为了使资源利用最大化实现每台服务器都能以尽可能大的效率抓取，我们要对每台爬虫服务器的CPU、内存等做评估避免宕机或者其他情况出现，在本篇文章中主要讲述单台服务器通过<strong>Docker实现Scrapy分布式抓取</strong>，工具只是工具，至于具体的架构还要参考不同的业务需求分析。因为公司原因，在业务分析后还是使用单台服务器进行数据采集。</p>
+<ul>
+<li>CentOS：Scrapy分布式直接在多台服务器上进行部署时，虽然可以提升效率但是可能有些浪费资源，尤其是在Docker虚拟化后，可以很方便的解决分布式浪费多台服务器资源的问题。</li>
+<li>Docker：不管是采用Python virtualenv还是直接使用Python环境，两者都没有直接使用Docker环境方便，Docker镜像的可重用性让环境的迁移变得更加方便，可以让我们后期架构拓展更加简单快捷。</li>
+<li>Scrapy：Scrapy框架的基于Twited的异步使得爬虫效率的得到很大提升，而且Scrapy使用简单方便数据产出量高，最重要的是成熟稳定。当然在这里我们自己也要考虑网站反爬的因素对Scrapy中件间做出适当调整，毕竟对于Robots协议我们还要注意一下，争取做一个优秀的、有道德的、有节操的码农(0.0说得我自己差点都信了)。</li>
+</ul>
+<h3 id="Scrapy"><a href="#Scrapy" class="headerlink" title="Scrapy"></a><a href="#Scrapy" title="Scrapy"></a>Scrapy</h3><p>       对于Scrapy的数据抓取无论是<a href="....">官网</a>还是一些其他博客都讲的很清楚，毕竟Scrapy的整体框架简单易懂，另外基于Python的简便快速，我们可以把更多的精力用于解决问题本身，不用过多地拘泥于语法和函数的学习中，在这里推荐<a href="....">靜觅</a>的Scrapy教程，清晰地讲述了Scrapy的基本用法，我这里就不过多的啰嗦了，因为本文重点在于分布式整体架构的思路及实现，所以大家对Scrapy有不太明白的可以自己学习，只要下面图的流程理清了就可以了，很简单的…</p>
+<p><img src="/images/scrapy_1.png"></p>
+<h3 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a><a href="#Docker" title="Docker"></a>Docker</h3><p>       Docker1.9后的network:1.9之后，在Docker中network从实验特性转为正式特性发布，所以先将Docker升级为1.9以上版本以支持不同容器间通信。</p>
+<hr>
+<h3 id="分布式中Scrapy应用"><a href="#分布式中Scrapy应用" class="headerlink" title="分布式中Scrapy应用"></a><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%ADScrapy%E5%BA%94%E7%94%A8" title="分布式中Scrapy应用"></a>分布式中Scrapy应用</h3><p>       <strong>Docker+Scrapy分布式的主要思想</strong>是通过利用Redis的List作队列，PUSH众多urls进入Redis队列中后，让Docker不同容器中的等待ScrapySpider把urls从Redis中POP出来进行请求并解析处理数据，之后的处理跟单机式的Scrapy任务就没有什么区别了，根据需求入库或者其他就好了。</p>
+<p>       单机变为分布式的修改之处：</p>
+<ul>
+<li>scrapy_redis:一个基于redis的scrapy组件，通过它可以快速实现简单分布式爬虫程序</li>
+<li>Redis:Key-value数据库的使用</li>
+<li>数据抓取架构和思路变化</li>
+</ul>
+<p>       scrapy_redis组件本质上提供了三大功能：scheduler(调度器)，dupefilter(URL去重规则-被调度器使用)，pipeline(数据持久化)。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from scrapy_redis.spiders import RedisSpider</span><br><span class="line">import scrapy</span><br><span class="line"></span><br><span class="line"><span class="comment"># scrapy中Spider默认继承scrapy.Spider</span></span><br><span class="line">class OldSpider(scrapy.Spider):</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在使用分布式要改为继承scrapy_redis.spiders.RedisSpider</span></span><br><span class="line">class NewSpider(RedisSpider):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>       在Spider中除了以上不同还要将start_urls替换为待爬url在redis中的key，因为对于多个容器之后在读取redis中key时要以<strong>队列</strong>方式进行pop，这里每个容器里的ScrapySpider要处理url抓取及解析。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">redis_key = <span class="string">&#x27;coinmarket:urls&#x27;</span>  <span class="comment"># 取代start_urls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># start_url = &#x27;https://www.xxx.com&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>       Spider文件主要修改的内容就是这些，之后数据解析的一些东西根据需求改动就可以了。</p>
+<h3 id="分布式中Docker应用"><a href="#分布式中Docker应用" class="headerlink" title="分布式中Docker应用"></a><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E4%B8%ADDocker%E5%BA%94%E7%94%A8" title="分布式中Docker应用"></a>分布式中Docker应用</h3><p>       <strong>Docker在这里主要是不同容器配置同一网段的容器静态IP，让不同的Docker容器可以互相通信。</strong></p>
+<p>       dokcer容器在创建时默认设置网络模式是bridge模式，安装完docker，系统会自动添加一个供docker使用的网桥docker0，我们创建一个新的容器时，容器通过DHCP获取一个与docker0同网段的IP地址。并默认连接到docker0网桥，以此实现容器与宿主机的网络互通。当然还有其他几种网络模式（host、container、none，有点类似于VMware的网络模式，但是还是有区别的）。</p>
+<p>       在查看完docker0网桥的IP后，我们在新建docker时需指定同一网段的IP，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># xxxxxx是指其它配置，在这里我们只关注ip配置</span></span><br><span class="line">docker run -i -d --net docker-br0 --ip 172.172.0.10 --name scrapy_spider01 xxxxxxx</span><br></pre></td></tr></table></figure>
+
+<p>       在这里我们先以一个容器作配置，因为只要一个配置好后，我们以本容器为准就可以创建镜像并创建其他相同容器，这样不管是在同一宿主机还是其他多台宿主机都可以很方便的移植。在进入新建容器后进行apt-get update后下载net工具等进行ping测试，当然啦这里有一点儿小插曲就是有可能ping不通，原因可能有很多，这里要仔细的检查一下Docker容器配置等，具体的问题我就不多说了，大家遇到问题不要头大，一步一步做下去都会解决的。</p>
+<p>       可以说在Docker容器ping通之后已经可以说大功告成了，因为之后的就是scrapy的部署，只要一个容器部署好，其他也就可以了，只不过这里要根据数据抓取需求做好处理工作就可以了，一切还是以需求为准（好吧，需求一天变3次的坑就不说了，说多了都是泪）。</p>
+<p>       至于Scrapy部署相信大家都可以搞的定，我这里也就不啰嗦了。Docker+Scrapy的优点主要是可以用单机实现分布式的效果，实现服务器资源利用率最大化，当然还有其他比如说移植快捷方便等优点。不过在这次项目中还是发现了Docker一些其他用法，大家可以在用的过程中去探索，相信他在简化我们工作的同时也会带来一些意想不到的效果。</p>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/2018/06/21/2018-06-21-%E6%8A%93%E5%8F%96%E7%99%BE%E5%BA%A6%E6%8C%87%E6%95%B0/" style="float: left;">
+        ← 抓取百度指数
+    </a>
+    
+    
+    <a class="pull-right" href="/2017/12/20/2017-12-20-%EF%BC%88July%E8%80%81%E5%B8%88%EF%BC%89%E7%90%86%E8%A7%A3SVM%E7%9A%84%E4%B8%89%E5%B1%82%E5%A2%83%E7%95%8C/">
+        （July老师）理解SVM的三层境界 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By speedor. All Rights Reserved.
+                </p>
+                <p>Theme By <a target="_blank" rel="noopener" href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+      
+</body>
+</html>
